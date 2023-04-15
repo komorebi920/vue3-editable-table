@@ -66,17 +66,19 @@ const tableData = ref({
   ],
 });
 
-const editData = ({ index, key, value, text }) => {
-  if (tableData.value.tBody[index][key] !== value) {
+const editData = ({ idx, key, value, text }, removeEditInputApp) => {
+  if (tableData.value.tBody[idx][key].toString() !== value) {
     const confirm = window.confirm(`
-      您确定要将『${tableData.value.tBody[index].name}』的『${tableData.value.tBody[index][text]}』成绩修改为『${value}』分吗？
+      您确定要将『${tableData.value.tBody[idx].name}』的『${tableData.value.tBody[idx][text]}』成绩修改为『${value}』分吗？
     `);
 
     if (confirm) {
-      tableData.value.tBody = tableData.value.tBody.map((item, idx) => {
-        index === idx && (item[key] = value);
+      tableData.value.tBody = tableData.value.tBody.map((item, _idx) => {
+        idx === _idx && (item[key] = value);
         return item;
       });
+    } else {
+      removeEditInputApp();
     }
   }
 };
