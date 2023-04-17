@@ -1,24 +1,3 @@
-# vue3-table-component
+# Vue 3 可编辑表格组件
 
-## Project setup
-```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- [【前端开发】Vue3『封装可编辑表格组件』【插件化开发】](https://www.bilibili.com/video/BV1rA4y1o7f7/)
